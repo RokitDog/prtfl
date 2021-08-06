@@ -382,6 +382,7 @@ li {
         position: relative;
         margin-top: 2rem;
         width:100%;
+        color:var(--text-color);
         label {
           position: absolute;
           left: 20px;
@@ -399,7 +400,33 @@ li {
           height: 50px;
           padding: 0 15px;
           width:100%;
-          color: inherit;
+          color:var(--text-color);
+        }
+        input[type=submit]{
+          background-color: var(--primary-color);
+          padding: 0.8rem 2em;
+          color: var(--text-color);
+          width:20%;
+          cursor: pointer;
+          display: inline-block;
+          font-size: inherit;
+          text-transform: uppercase;
+          position: relative;
+          transition: all .4s ease;
+          &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: .2rem;
+            transition: all .4s ease;
+            left:0;
+            bottom: 0;
+            opacity: 0.7;
+          }
+          &:hover::after {
+            width: 100%;
+            background-color: var(--text-color);
+          }
         }
         textarea {
           background-color: transparent;
@@ -437,6 +464,7 @@ li {
     align-items: center;
     justify-content: center;
     margin-right: 1.5rem;
+    color:var(--text-color);
     svg {
     font-size: 2.3rem;
     color: var(--text-color);

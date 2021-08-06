@@ -1,8 +1,6 @@
 import React from 'react'
 import { Background } from './Background'
-import { PrimaryButton } from './PrimaryButton'
 import { Title } from './Title'
-import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import { ContactItem } from './ContactItem';
@@ -20,14 +18,14 @@ export const Contact = () => {
                         <div className="contact-title">
                             <h4>Get In Touch</h4>
                         </div>
-                        <form className="form">
+                        <form className="form"  action="https://formsubmit.io/send/dbce51cd-b6b5-4605-9883-366b3feb9dd9" method="POST">
                             <div className="form-field">
                                 <label htmlFor="name">Enter your name*</label>
-                                <input id="name" type="text"/>
+                                <input name="name" id="name" type="text"/>
                             </div>
                             <div className="form-field">
                                 <label htmlFor="Email">Enter your Email*</label>
-                                <input id="email" type="email"/>
+                                <input name="email" id="email" type="email"/>
                             </div>
                             <div className="form-field">
                                 <label htmlFor="subject">Subject*</label>
@@ -37,9 +35,11 @@ export const Contact = () => {
                                 <label htmlFor="text-area">Message</label>
                                 <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
                             </div>
+                            <input name="_formsubmit_id" type="text" style={{display: 'none'}}></input>
                             <div className="form-field">
-                                <PrimaryButton title={'SEND EMAIL'}/>
+                                <input value="submit" type="submit"></input>
                             </div>
+                            <input name="_redirect" type="hidden" id="redirect" value="https://portfolio-a933d.web.app/"></input>
                         </form>
                     </div>
 
